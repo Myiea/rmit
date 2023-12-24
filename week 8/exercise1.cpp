@@ -13,7 +13,7 @@ class Node{
 
         void linkedNextNode(Node *nextNode){
             next = nextNode;
-            this -> prev = nextNode;
+            nextNode -> prev = this;
         }
 
         void linkedPrevNode(Node *prevNode){
@@ -55,7 +55,9 @@ int main(){
     //Testing code
     Node node1(8), node2(5), node3(3), node4(6);
 
+    // connect the nodes
     Node *head = &node1; // pointer variable
+    
     node1.linkedNextNode(&node2);
     node2.linkedNextNode(&node3);
     node3.linkedNextNode(&node4);
