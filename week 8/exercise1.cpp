@@ -51,8 +51,24 @@ void showLinks(Node *head, Node *tail){
     showForthLinks(head);
 }
 
+
+// Functions to insert Node
+// Note: '*&' is pass-by-reference for the pointer variable
+// (same as pass-by-reference for a normal data type)
+insertNode(head, tail, nullptr, &newNode1);
+void insertNode(Node *&headNode, Node *&tailNode, Node *priorNode, Node *newNode){
+    if (priorNode == nullptr){
+        newNode -> linkedNextNode(headNode); // link newNode to current head
+        headNode = newNode; // the newNode becomes the new head
+    }
+
+    // Insert at another position
+}
+
 int main(){
     //Testing code
+
+    // part a
     Node node1(8), node2(5), node3(3), node4(6);
 
     // connect the nodes
@@ -64,7 +80,14 @@ int main(){
 
     Node *tail = &node4; // pointer variable
 
-    // show connection
+    // show connections
     cout << "Original linked list: \n";
+    showLinks(head, tail);
+
+    // part b
+    // Test insert node at the front
+    cout << "\nInsert 200 after at the front: \n";
+    Node newNode1(200);
+    insertNode(head, tail, nullptr, &newNode1);
     showLinks(head, tail);
 }
