@@ -66,19 +66,19 @@ int main() {
     nonAcademicDept.numberOfServices = 10;
 
     // Print information
-    cout << "Staff 1 information\n";
+    cout << "**** Staff 1 information ****\n";
     staff1.printInfo();
     cout << endl;
 
-    cout << "Staff 2 information\n";
+    cout << "**** Staff 2 information *****\n";
     staff2.printInfo();
     cout << endl;
 
-    cout << "Academic Department information\n";
+    cout << "**** Academic Department information ****\n";
     academicDept.printInfo();
     cout << endl;
 
-    cout << "Non Academic information\n";
+    cout << "**** Non-Academic information ****\n";
     nonAcademicDept.printInfo();
 
     return 0;
